@@ -1,5 +1,5 @@
 var $ = require('jquery');
-var os = require('platform/os');
+var platform = require('platform');
 
 module.exports = function initPlatformDownloads() {
     var collapsibleEvents = {
@@ -8,9 +8,9 @@ module.exports = function initPlatformDownloads() {
     };
 
     $(function() {
-        $('.download-links li.' + os.type() + os.arch()).show();
+        $('.download-links li.' + platform.name + platform.version).show();
 
-        $('#platform--' + os.type())
+        $('#platform--' + platform.name)
             .addClass('in')
             .css('overflow', 'visible')
             .css('height', 'auto')

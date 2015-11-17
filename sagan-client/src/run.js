@@ -29,7 +29,7 @@ var Munchkin, baseUrl, sts_import; // pre-existing globals
                     exports: '$.fn.timeago'
                 }
             },
-            "google-code-prettify": 'lib/google-code-prettify/src/prettify',
+            "code-prettify": 'lib/code-prettify/src/prettify',
             bootstrap: {
                 location: 'lib/bootstrap/docs/assets/js/bootstrap',
                 config: {

@@ -1,7 +1,6 @@
 var gulpFilter = require('gulp-filter'),
     cram = require('gulp-cram'),
     uglify = require('gulp-uglify'),
-    bowerSrc = require('gulp-bower-src'),
     sourcemaps = require('gulp-sourcemaps'),
     cssmin = require('gulp-minify-css'),
     gulp = require('gulp');
@@ -39,22 +38,10 @@ gulp.task('build-modules', function() {
         .pipe(gulp.dest(paths.dest));
 });
 
-// copy main bower files (see bower.json) and optimize js
-gulp.task('bower-files', function() {
-    var filter = gulpFilter(["**/*.js", "!**/*.min.js"]);
-    return bowerSrc()
-        .pipe(sourcemaps.init())
-        .pipe(filter)
-        .pipe(uglify())
-        .pipe(filter.restore())
-        .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest(paths.dest+'lib'));
-})
-
 // copy assets
 gulp.task('copy-assets', function() {
     return gulp.src(paths.assets)
         .pipe(gulp.dest(paths.dest));
 })
 
-gulp.task('build', ['minify-css', 'build-modules', 'copy-assets', 'bower-files'], function(){ });
+gulp.task('build', ['minify-css', 'build-modules', 'copy-assets'], function(){ });
