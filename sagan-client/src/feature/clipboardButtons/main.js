@@ -8,10 +8,10 @@ module.exports = function () {
     return new Clipboard();
 };
 
-var ZeroClipboard = require('ZeroClipboard');
+var ZeroClipboard = require('zeroclipboard');
 var clipboardProvider = require('./buttonConnector');
 var copyButtonProvider = require('./copyButtonProvider');
-var buttonTemplate = require('text!./button.html');
+var buttonTemplate = '<button class="copy-button snippet"></button>';
 var $ = require('jquery');
 
 // Bootstrap is included to implicitly import the tooltip plugin. ick.

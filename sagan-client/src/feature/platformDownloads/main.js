@@ -1,5 +1,5 @@
 var $ = require('jquery');
-var os = require('platform/os');
+var platform = require('../../platform/os');
 
 module.exports = function initPlatformDownloads() {
     var collapsibleEvents = {
