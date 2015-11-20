@@ -1,33 +1,43 @@
 var cssmin = require('gulp-minify-css'),
-    gulp = require('gulp');
+  gulp = require('gulp');
 
 var paths = {
-    css: {
-        files: ['src/css/*.css'],
-        root: 'src/css'
-    },
-    assets: ['src/img*/**','src/*.txt','src/*.html','src/font*/**','src/css*/filterable-list.css'],
-    js: ['config.js', 'build.js', 'build.js.map', 'jspm_packages/system.js', 'src/**/*'],
-    dest: './dist/'
+  css: {
+    files: ['src/css/*.css'],
+    root: 'src/css'
+  },
+  external_css: [
+    'node_modules/twitter-bootstrap/docs/assets/css/bootstrap.css',
+    'node_modules/font-awesome/css/font-awesome.min.css'
+  ],
+  assets: ['src/img*/**', 'src/*.txt', 'src/*.html', 'src/font*/**', 'src/css*/filterable-list.css'],
+  js: ['config.js', 'build.js', 'build.js.map', 'jspm_packages/system.js', 'src/**/*'],
+  dest: './dist/'
 };
 
 // concat and minify CSS files
 gulp.task('minify-css', function() {
-    return gulp.src(paths.css.files)
-        .pipe(cssmin({root:paths.css.root}))
-        .pipe(gulp.dest(paths.dest+'css'));
+  return gulp.src(paths.css.files)
+    .pipe(cssmin({root: paths.css.root}))
+    .pipe(gulp.dest(paths.dest + 'css'));
+});
+
+// copy external css
+gulp.task('copy-external-css', function() {
+  return gulp.src(paths.external_css)
+    .pipe(gulp.dest(paths.dest + 'lib/css'));
 });
 
 // copy assets
 gulp.task('copy-assets', function() {
-    return gulp.src(paths.assets)
-        .pipe(gulp.dest(paths.dest));
+  return gulp.src(paths.assets)
+    .pipe(gulp.dest(paths.dest));
 });
 
 // copy javascript
 gulp.task('copy-javascript', function() {
-    return gulp.src(paths.js)
-        .pipe(gulp.dest(paths.dest + '/lib'));
+  return gulp.src(paths.js)
+    .pipe(gulp.dest(paths.dest + 'lib'));
 });
 
-gulp.task('build', ['minify-css', 'copy-assets', 'copy-javascript'], function(){ });
+gulp.task('build', ['minify-css', 'copy-external-css', 'copy-assets', 'copy-javascript'], function() { });

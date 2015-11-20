@@ -1,71 +1,12 @@
 System.config({
   defaultJSExtensions: true,
   transpiler: "traceur",
-  babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
-  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-  bundles: {
-    "build.js": [
-      "src/app/main.js",
-      "src/feature/search/main.js",
-      "src/feature/clipboardButtons/main.js",
-      "src/feature/searchFacets/main.js",
-      "src/feature/filterableList/main.js",
-      "src/feature/codeSidebar/main.js",
-      "src/feature/stsImport/main.js",
-      "src/feature/mobileSupport/main.js",
-      "src/feature/infoPopups/main.js",
-      "src/feature/platformDownloads/main.js",
-      "src/feature/formWidgets/main.js",
-      "src/feature/prettify/main.js",
-      "src/feature/map/main.js",
-      "src/feature/timeAgo/main.js",
-      "src/feature/hide-show-guide/main.js",
-      "src/feature/heroBanner/main.js",
-      "npm:jquery@1.11.3",
-      "npm:most@0.2.4",
-      "src/feature/search/SearchController.js",
-      "npm:zeroclipboard@1.3.5",
-      "src/feature/clipboardButtons/copyButtonProvider.js",
-      "src/feature/clipboardButtons/buttonConnector.js",
-      "github:twbs/bootstrap@2.3.2",
-      "src/feature/filterableList/filterableList.js",
-      "src/feature/searchFacets/filterForm.js",
-      "src/feature/filterableList/getUrlFilter.js",
-      "src/platform/os.js",
-      "npm:eonasdan-bootstrap-datetimepicker@3.1.3",
-      "github:rmm5t/jquery-timeago@1.4.3",
-      "github:tcollard/google-code-prettify@1.0.4/src/run_prettify",
-      "src/feature/hide-show-guide/storage.js",
-      "npm:most@0.2.4/most",
-      "npm:jquery@1.11.3/dist/jquery",
-      "src/feature/filterableList/filter.js",
-      "src/feature/filterableList/attributeMatcher.js",
-      "github:twbs/bootstrap@2.3.2/docs/assets/js/bootstrap",
-      "npm:zeroclipboard@1.3.5/ZeroClipboard",
-      "npm:eonasdan-bootstrap-datetimepicker@3.1.3/src/js/bootstrap-datetimepicker",
-      "github:rmm5t/jquery-timeago@1.4.3/jquery.timeago",
-      "npm:most@0.2.4/Stream",
-      "npm:most@0.2.4/async",
-      "github:jspm/nodelibs-process@0.1.2",
-      "npm:moment@2.8.4",
-      "github:jspm/nodelibs-process@0.1.2/index",
-      "npm:moment@2.8.4/moment",
-      "npm:process@0.11.2",
-      "npm:process@0.11.2/browser"
-    ]
-  },
 
   map: {
-    "babel": "npm:babel-core@5.8.34",
-    "babel-runtime": "npm:babel-runtime@5.8.34",
     "bootstrap": "github:twbs/bootstrap@2.3.2",
     "bootstrap-datetimepicker": "npm:eonasdan-bootstrap-datetimepicker@3.1.3",
     "core-js": "npm:core-js@1.2.6",
@@ -153,9 +94,6 @@ System.config({
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
-    },
-    "npm:babel-runtime@5.8.34": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:bootstrap@3.3.5": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",

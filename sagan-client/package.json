@@ -13,7 +13,9 @@
     "jshint": "2.1",
     "jspm": "^0.16.14",
     "wd": "0.2.17",
-    "when": "3.4.4"
+    "when": "3.4.4",
+    "twitter-bootstrap": "2.1.1",
+    "font-awesome": "4.4.0"
   },
   "directories": {
     "test": "test",
@@ -28,7 +30,7 @@
       "test": "test"
     },
     "dependencies": {
-      "bootstrap": "github:twbs/bootstrap@^2.3.2",
+      "bootstrap": "npm:twitter-bootstrap@^2.1.1",
       "bootstrap-datetimepicker": "npm:eonasdan-bootstrap-datetimepicker@^3.0.0",
       "curl": "github:cujojs/curl@^0.8.12",
       "font-awesome": "npm:font-awesome@^4.4.0",
