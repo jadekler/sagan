@@ -7,6 +7,7 @@ var paths = {
     root: 'src/css'
   },
   external_css: [
+    'jspm_packages/npm/eonasdan-bootstrap-datetimepicker@4.15.35/build/css/bootstrap-datetimepicker.min.css',
     'node_modules/twitter-bootstrap/docs/assets/css/bootstrap.css',
     'node_modules/font-awesome/css/font-awesome.min.css'
   ],

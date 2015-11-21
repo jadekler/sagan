@@ -7,16 +7,15 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "font-awesome": "4.4.0",
     "gulp": "3.9.0",
     "gulp-minify-css": "0.3.7",
     "gulp-util": "3.0.1",
     "jshint": "2.1",
     "jspm": "^0.16.14",
-    "wd": "0.2.17",
-    "when": "3.4.4",
     "twitter-bootstrap": "2.1.1",
-    "font-awesome": "4.4.0",
-    "eonasdan-bootstrap-datetimepicker": "^3.0.0"
+    "wd": "0.2.17",
+    "when": "3.4.4"
   },
   "directories": {
     "test": "test",
@@ -31,7 +30,7 @@
       "test": "test"
     },
     "dependencies": {
-      "bootstrap-datetimepicker": "npm:eonasdan-bootstrap-datetimepicker@^3.0.0",
+      "bootstrap-datetimepicker": "npm:eonasdan-bootstrap-datetimepicker@^4.15.35",
       "curl": "github:cujojs/curl@^0.8.12",
       "font-awesome": "npm:font-awesome@^4.4.0",
       "gmaps": "npm:gmaps@^0.4.14",

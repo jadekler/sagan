@@ -15,7 +15,7 @@ System.config({
   map: {
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
-    "bootstrap-datetimepicker": "npm:eonasdan-bootstrap-datetimepicker@3.1.3",
+    "bootstrap-datetimepicker": "npm:eonasdan-bootstrap-datetimepicker@4.15.35",
     "core-js": "npm:core-js@1.2.6",
     "curl": "github:cujojs/curl@0.8.12",
     "font-awesome": "npm:font-awesome@4.4.0",
@@ -254,10 +254,11 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:eonasdan-bootstrap-datetimepicker@3.1.3": {
+    "npm:eonasdan-bootstrap-datetimepicker@4.15.35": {
       "bootstrap": "npm:bootstrap@3.3.5",
-      "jquery": "npm:jquery@1.11.3",
-      "moment": "npm:moment@2.8.4"
+      "jquery": "npm:jquery@2.1.4",
+      "moment": "npm:moment@2.8.4",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:etag@1.7.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -283,6 +284,9 @@ System.config({
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:jquery@1.11.3": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:jquery@2.1.4": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:miller-rabin@4.0.0": {
