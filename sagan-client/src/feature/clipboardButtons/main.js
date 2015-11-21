@@ -14,8 +14,9 @@ var copyButtonProvider = require('./copyButtonProvider');
 var buttonTemplate = '<button class="copy-button snippet"></button>';
 var $ = require('jquery');
 
-// Bootstrap is included to implicitly import the tooltip plugin. ick.
-require('bootstrap');
+// This version of bootstrap looks for window.jQuery. ick.
+window.jQuery = $;
+require('twitter-bootstrap/js/bootstrap-tooltip');
 
 // ZeroClipboard 1.1.7 needs this
 // I tried updating to ZeroClipboard 1.2.2 and it has major timing issues
